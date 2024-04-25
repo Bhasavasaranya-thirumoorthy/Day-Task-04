@@ -1,0 +1,88 @@
+                                               //DAY TASK 04
+//1)Creating my own resume using JSON
+var myResume={
+  "PERSONAL PROFILE": [
+    {
+      "name": "Bhasava Saranya B T",
+      "email": "bhasavasaranya08@gmail.com",
+      "phone no": 1234567890,
+      "address": "ABC street",
+      "postalCode": 641035,
+      "city": "Coimbatore",
+      "state": "Tamilnadu",
+      "country": "India"
+    }
+  ],
+  "profiles": [
+    {
+      "github": "https://github.com/Bhasavasaranya-thirumoorthy"
+    }
+  ],
+  "education": [
+    {
+      "Institution": "Kumaraguru College of Technology",
+      "Department": "Fashion Technology",
+      "studyType": "fulltime",
+      "Graduation year": 2023,
+      "Percentage": 83
+    }
+  ],
+  "skills": [
+    {
+      "name": "python, C",
+      "level": "beginner"
+    }
+  ],
+  "languages": [
+    {
+      "language": "Tamil, English"
+    }
+  ],
+  "interests": [
+    {
+      "name": "reading books"
+    }
+  ]
+}
+  //2) For the given JSON iterate over all for loops (for, forEach, for In, for of)
+  var json = [
+    {
+        "name": "Bhasava Saranya B T",
+        "email": "bhasavasaranya08@gmail.com",
+        "country": "India",
+        "phoneNo": "1234567890"
+    }
+];
+
+// Using a for loop
+console.log("Using for loop:");
+for (var i = 0; i < json.length; i++) {
+    var obj = json[i];
+    console.log(`Name: ${obj.name}`);
+    console.log(`Email: ${obj.email}`);
+    console.log(`Country: ${obj.country}`);
+    console.log(`Phone No: ${obj.phoneNo}`);
+    console.log();
+}
+
+// Using forEach
+console.log("Using forEach (equivalent to for loop in Python):");
+json.forEach(function (obj) {
+    console.log(`Country: ${obj.country}`);
+});
+
+// Using for...in loop
+console.log("Using for...in loop:");
+for (var key in json[0]) {
+    if (json[0].hasOwnProperty(key)) {
+        console.log(`${key}: ${json[0][key]}`);
+    }
+}
+
+// Using for...of loop 
+console.log("Using for...of loop (not applicable in JavaScript):");
+let text = "";
+for (let char of json[0].name) {
+    text += char;
+}
+console.log(`Name: ${text}`);
